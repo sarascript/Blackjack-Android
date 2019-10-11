@@ -42,10 +42,93 @@ class MainActivity : AppCompatActivity() {
         var contPlayer2 = 0
 
         fun randomNumber(): Int {
-            val random = (1..6).shuffled().first()
+            var random = (1..6).random()
             return random
         }
 
+        btnPlayer1.setOnClickListener {
+            var num = randomNumber()
+            when (num) {
+                1 -> {
+                    contPlayer1 = contPlayer1 + 1
+                    dice1.setImageResource(R.drawable.number_1)
+                    txtResultPlayer1.text = contPlayer1.toString()
+
+                }
+                2 -> {
+                    contPlayer1 = contPlayer1 + 2
+                    dice1.setImageResource(R.drawable.number_2)
+                    txtResultPlayer1.text = contPlayer1.toString()
+
+                }
+                3 -> {
+                    contPlayer1 = contPlayer1 + 3
+                    dice1.setImageResource(R.drawable.number_3)
+                    txtResultPlayer1.text = contPlayer1.toString()
+                }
+                4 -> {
+                    contPlayer1 = contPlayer1 + 4
+                    dice1.setImageResource(R.drawable.number_4)
+                    txtResultPlayer1.text = contPlayer1.toString()
+                }
+                5 -> {
+                    contPlayer1 = contPlayer1 + 5
+                    dice1.setImageResource(R.drawable.number_5)
+                    txtResultPlayer1.text = contPlayer1.toString()
+                }
+                6 -> {
+                    contPlayer1 = contPlayer1 + 6
+                    dice1.setImageResource(R.drawable.number_6)
+                    txtResultPlayer1.text = contPlayer1.toString()
+                }
+            }
+        }
+
+        btnPlayer2.setOnClickListener {
+            var num = randomNumber()
+            when (num) {
+                1 -> {
+                    contPlayer2 = contPlayer2 + 1
+                    dice2.setImageResource(R.drawable.number_1)
+                    txtResultPlayer2.text = contPlayer2.toString()
+
+                }
+                2 -> {
+                    contPlayer2 = contPlayer2 + 2
+                    dice2.setImageResource(R.drawable.number_2)
+                    txtResultPlayer2.text = contPlayer2.toString()
+
+                }
+                3 -> {
+                    contPlayer2 = contPlayer2 + 3
+                    dice2.setImageResource(R.drawable.number_3)
+                    txtResultPlayer2.text = contPlayer2.toString()
+                }
+                4 -> {
+                    contPlayer2 = contPlayer2 + 4
+                    dice2.setImageResource(R.drawable.number_4)
+                    txtResultPlayer2.text = contPlayer2.toString()
+                }
+                5 -> {
+                    contPlayer2 = contPlayer2 + 5
+                    dice2.setImageResource(R.drawable.number_5)
+                    txtResultPlayer2.text = contPlayer2.toString()
+                }
+                6 -> {
+                    contPlayer2 = contPlayer2 + 6
+                    dice2.setImageResource(R.drawable.number_6)
+                    txtResultPlayer2.text = contPlayer2.toString()
+                }
+            }
+        }
+
+        btnStopPlayer1.setOnClickListener {
+            btnPlayer1.setEnabled(false)
+        }
+
+        btnStopPlayer2.setOnClickListener {
+            btnPlayer2.setEnabled(false)
+        }
 
     }
 
