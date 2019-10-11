@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         var contPlayer1 = 0
         var contPlayer2 = 0
+        var winner = 0
 
         dice1.setImageResource(R.drawable.player)
         dice2.setImageResource(R.drawable.player)
@@ -56,13 +57,13 @@ class MainActivity : AppCompatActivity() {
             return random
         }
 
-        fun gameOver() {
+        fun gameOver(winner: Int) {
             btnPlayer1.setEnabled(false)
             btnPlayer2.setEnabled(false)
             btnStopPlayer1.setEnabled(false)
             btnStopPlayer2.setEnabled(false)
-            txtResultPlayer1.text = "FINISHED"
-            txtResultPlayer2.text = "FINISHED"
+            txtResultPlayer1.text = "PLAYER" + winner.toString() + "WINS"
+            txtResultPlayer2.text = "PLAYER" + winner.toString() + "WINS"
         }
 
         btnPlayer1.setOnClickListener {
@@ -74,11 +75,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                         else if (contPlayer1 == 21) {
                             txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                         }
                     }
 
@@ -88,11 +91,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                 }
                 3 -> {
@@ -101,11 +106,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                 }
                 4 -> {
@@ -114,11 +121,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                 }
                 5 -> {
@@ -127,11 +136,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                 }
                 6 -> {
@@ -140,11 +151,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                 }
             }
@@ -163,11 +176,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
                 2 -> {
@@ -176,11 +191,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
                 3 -> {
@@ -189,11 +206,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
                 4 -> {
@@ -202,11 +221,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
                 5 -> {
@@ -215,11 +236,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
                 6 -> {
@@ -228,11 +251,13 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        gameOver()
+                        winner = 1
+                        gameOver(winner)
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        gameOver()
+                        winner = 2
+                        gameOver(winner)
                     }
                 }
             }
