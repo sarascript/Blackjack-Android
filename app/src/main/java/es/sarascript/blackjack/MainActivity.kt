@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnStopPlayer2: Button
     private lateinit var dice1: ImageView
     private lateinit var dice2: ImageView
+    private lateinit var btnRecharge: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +38,16 @@ class MainActivity : AppCompatActivity() {
         dice2 = findViewById(R.id.dice2_img)
         btnPlayer2 = findViewById(R.id.j2_btn)
         btnStopPlayer2 = findViewById(R.id.stop2_btn)
+        btnRecharge = findViewById(R.id.recharge_btn)
 
         var contPlayer1 = 0
         var contPlayer2 = 0
+
+        dice1.setImageResource(R.drawable.player)
+        dice2.setImageResource(R.drawable.player)
+
+        btnPlayer1.setEnabled(true);
+        btnPlayer2.setEnabled(false);
 
         fun randomNumber(): Int {
             var random = (1..6).random()
@@ -53,35 +61,96 @@ class MainActivity : AppCompatActivity() {
                     contPlayer1 = contPlayer1 + 1
                     dice1.setImageResource(R.drawable.number_1)
                     txtResultPlayer1.text = contPlayer1.toString()
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                        else if (contPlayer1 == 21) {
+                            txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                        }
+                    }
 
-                }
                 2 -> {
                     contPlayer1 = contPlayer1 + 2
                     dice1.setImageResource(R.drawable.number_2)
                     txtResultPlayer1.text = contPlayer1.toString()
-
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer1 == 21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 3 -> {
                     contPlayer1 = contPlayer1 + 3
                     dice1.setImageResource(R.drawable.number_3)
                     txtResultPlayer1.text = contPlayer1.toString()
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer1 == 21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 4 -> {
                     contPlayer1 = contPlayer1 + 4
                     dice1.setImageResource(R.drawable.number_4)
                     txtResultPlayer1.text = contPlayer1.toString()
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer1 == 21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 5 -> {
                     contPlayer1 = contPlayer1 + 5
                     dice1.setImageResource(R.drawable.number_5)
                     txtResultPlayer1.text = contPlayer1.toString()
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer1 == 21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 6 -> {
                     contPlayer1 = contPlayer1 + 6
                     dice1.setImageResource(R.drawable.number_6)
                     txtResultPlayer1.text = contPlayer1.toString()
+                    if (contPlayer1>21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer1 == 21) {
+                        txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
             }
+            btnPlayer1.setEnabled(false);
+            btnPlayer2.setEnabled(true);
         }
 
         btnPlayer2.setOnClickListener {
@@ -91,18 +160,46 @@ class MainActivity : AppCompatActivity() {
                     contPlayer2 = contPlayer2 + 1
                     dice2.setImageResource(R.drawable.number_1)
                     txtResultPlayer2.text = contPlayer2.toString()
-
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 2 -> {
                     contPlayer2 = contPlayer2 + 2
                     dice2.setImageResource(R.drawable.number_2)
                     txtResultPlayer2.text = contPlayer2.toString()
-
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 3 -> {
                     contPlayer2 = contPlayer2 + 3
                     dice2.setImageResource(R.drawable.number_3)
                     txtResultPlayer2.text = contPlayer2.toString()
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 4 -> {
                     contPlayer2 = contPlayer2 + 4
@@ -113,21 +210,60 @@ class MainActivity : AppCompatActivity() {
                     contPlayer2 = contPlayer2 + 5
                     dice2.setImageResource(R.drawable.number_5)
                     txtResultPlayer2.text = contPlayer2.toString()
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
                 6 -> {
                     contPlayer2 = contPlayer2 + 6
                     dice2.setImageResource(R.drawable.number_6)
                     txtResultPlayer2.text = contPlayer2.toString()
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        btnPlayer1.setEnabled(false)
+                        btnPlayer2.setEnabled(false)
+                    }
                 }
             }
+            btnPlayer1.setEnabled(true);
+            btnPlayer2.setEnabled(false);
         }
 
         btnStopPlayer1.setOnClickListener {
-            btnPlayer1.setEnabled(false)
+            btnPlayer1.setEnabled(false);
+            btnPlayer2.setEnabled(true);
         }
 
         btnStopPlayer2.setOnClickListener {
-            btnPlayer2.setEnabled(false)
+            btnPlayer1.setEnabled(true);
+            btnPlayer2.setEnabled(false);
+        }
+
+        btnRecharge.setOnClickListener  {
+
+            var contPlayer1 = 0
+            var contPlayer2 = 0
+
+            txtResultPlayer1.text = contPlayer1.toString()
+            txtResultPlayer1.text = contPlayer1.toString()
+
+            btnPlayer1.setEnabled(true);
+            btnPlayer2.setEnabled(false);
+
+            dice1.setImageResource(R.drawable.player)
+            dice2.setImageResource(R.drawable.player)
         }
 
     }
