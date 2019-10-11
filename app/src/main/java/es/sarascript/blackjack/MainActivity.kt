@@ -261,10 +261,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            btnPlayer1.setEnabled(false);
-            btnPlayer2.setEnabled(true);
-            btnStopPlayer1.setEnabled(false);
-            btnStopPlayer2.setEnabled(true);
+            btnPlayer1.setEnabled(true);
+            btnPlayer2.setEnabled(false);
+            btnStopPlayer1.setEnabled(true);
+            btnStopPlayer2.setEnabled(false);
         }
 
         btnStopPlayer1.setOnClickListener {
