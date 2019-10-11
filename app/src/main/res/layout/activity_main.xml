@@ -4,95 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0C270C"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:padding="30dp"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="30dp">
 
             <TextView
                 android:id="@+id/j1_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="JUGADOR 1"
                 android:textAlignment="center"
-                android:text="JUGADOR 1" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/score1_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
                 tools:text="PUNTUACIÓN" />
 
             <ImageView
                 android:id="@+id/dice1_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/number_1"
-                android:scaleType="centerInside"/>
+                android:layout_marginBottom="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/number_1" />
 
             <Button
                 android:id="@+id/j1_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TIRAR"/>
+                android:layout_marginBottom="30dp"
+                android:text="TIRAR"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/stop1_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PLANTARSE"/>
+                android:text="PLANTARSE"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:padding="30dp"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="30dp">
 
             <TextView
                 android:id="@+id/j2_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="JUGADOR 2"
                 android:textAlignment="center"
-                android:text="JUGADOR 2" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/score2_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
                 tools:text="PUNTUACIÓN" />
 
             <ImageView
                 android:id="@+id/dice2_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/number_1"
-                android:scaleType="centerInside"/>
+                android:layout_marginBottom="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/number_1" />
 
             <Button
                 android:id="@+id/j2_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TIRAR"/>
+                android:layout_marginBottom="30dp"
+                android:text="TIRAR"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/stop2_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PLANTARSE"/>
+                android:text="PLANTARSE"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </LinearLayout>
