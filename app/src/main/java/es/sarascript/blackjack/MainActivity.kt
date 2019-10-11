@@ -148,6 +148,8 @@ class MainActivity : AppCompatActivity() {
             }
             btnPlayer1.setEnabled(false);
             btnPlayer2.setEnabled(true);
+            btnStopPlayer1.setEnabled(false);
+            btnStopPlayer2.setEnabled(true);
         }
 
         btnPlayer2.setOnClickListener {
@@ -196,6 +198,14 @@ class MainActivity : AppCompatActivity() {
                     contPlayer2 = contPlayer2 + 4
                     dice2.setImageResource(R.drawable.number_4)
                     txtResultPlayer2.text = contPlayer2.toString()
+                    if (contPlayer2>21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
+                        gameOver()
+                    }
+                    else if (contPlayer2 == 21) {
+                        txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
+                        gameOver()
+                    }
                 }
                 5 -> {
                     contPlayer2 = contPlayer2 + 5
@@ -224,8 +234,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            btnPlayer1.setEnabled(true);
-            btnPlayer2.setEnabled(false);
+            btnPlayer1.setEnabled(false);
+            btnPlayer2.setEnabled(true);
+            btnStopPlayer1.setEnabled(false);
+            btnStopPlayer2.setEnabled(true);
         }
 
         btnStopPlayer1.setOnClickListener {
