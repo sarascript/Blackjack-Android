@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
 
         btnPlayer1.setEnabled(true);
         btnPlayer2.setEnabled(false);
+        btnStopPlayer1.setEnabled(true);
+        btnStopPlayer2.setEnabled(false);
 
         fun randomNumber(): Int {
             var random = (1..6).random()
@@ -260,6 +262,8 @@ class MainActivity : AppCompatActivity() {
 
             btnPlayer1.setEnabled(true);
             btnPlayer2.setEnabled(false);
+            btnStopPlayer1.setEnabled(true);
+            btnStopPlayer2.setEnabled(false);
 
             dice1.setImageResource(R.drawable.player)
             dice2.setImageResource(R.drawable.player)
