@@ -63,8 +63,14 @@ class MainActivity : AppCompatActivity() {
             btnStopPlayer1.setEnabled(false)
             btnStopPlayer2.setEnabled(false)
 
-            txtResultPlayer1.text = "PLAYER" + winner.toString() + "WINS"
-            txtResultPlayer2.text = "PLAYER" + winner.toString() + "WINS"
+            if (winner == 1) {
+                txtResultPlayer1.text = "PLAYER 1 WINS"
+                txtResultPlayer2.text = "PLAYER 2 LOSES"
+            } else {
+                txtResultPlayer1.text = "PLAYER 1 LOSES"
+                txtResultPlayer2.text = "PLAYER 2 WINS"
+            }
+
         }
 
         btnPlayer1.setOnClickListener {
@@ -275,17 +281,24 @@ class MainActivity : AppCompatActivity() {
         btnStopPlayer1.setOnClickListener {
             btnPlayer1.setEnabled(false);
             btnPlayer2.setEnabled(true);
+            btnStopPlayer1.setEnabled(false);
+            btnStopPlayer2.setEnabled(true);
         }
 
         btnStopPlayer2.setOnClickListener {
             btnPlayer1.setEnabled(true);
             btnPlayer2.setEnabled(false);
+            btnStopPlayer1.setEnabled(true);
+            btnStopPlayer2.setEnabled(false);
         }
 
         btnRecharge.setOnClickListener  {
 
             contPlayer1 = 0
             contPlayer2 = 0
+
+            winner = 0
+            winner = 0
 
             txtResultPlayer1.text = contPlayer1.toString()
             txtResultPlayer2.text = contPlayer1.toString()
