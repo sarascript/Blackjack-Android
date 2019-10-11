@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             btnPlayer2.setEnabled(false)
             btnStopPlayer1.setEnabled(false)
             btnStopPlayer2.setEnabled(false)
+
             txtResultPlayer1.text = "PLAYER" + winner.toString() + "WINS"
             txtResultPlayer2.text = "PLAYER" + winner.toString() + "WINS"
         }
@@ -161,10 +162,12 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            btnPlayer1.setEnabled(false);
-            btnPlayer2.setEnabled(true);
-            btnStopPlayer1.setEnabled(false);
-            btnStopPlayer2.setEnabled(true);
+            if (winner == 0) {
+                btnPlayer1.setEnabled(false);
+                btnPlayer2.setEnabled(true);
+                btnStopPlayer1.setEnabled(false);
+                btnStopPlayer2.setEnabled(true);
+            }
         }
 
         btnPlayer2.setOnClickListener {
@@ -261,10 +264,12 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            btnPlayer1.setEnabled(true);
-            btnPlayer2.setEnabled(false);
-            btnStopPlayer1.setEnabled(true);
-            btnStopPlayer2.setEnabled(false);
+            if(winner == 0) {
+                btnPlayer1.setEnabled(true);
+                btnPlayer2.setEnabled(false);
+                btnStopPlayer1.setEnabled(true);
+                btnStopPlayer2.setEnabled(false);
+            }
         }
 
         btnStopPlayer1.setOnClickListener {
