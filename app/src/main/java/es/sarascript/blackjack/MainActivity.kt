@@ -54,6 +54,15 @@ class MainActivity : AppCompatActivity() {
             return random
         }
 
+        fun gameOver() {
+            btnPlayer1.setEnabled(false)
+            btnPlayer2.setEnabled(false)
+            btnStopPlayer1.setEnabled(false)
+            btnStopPlayer2.setEnabled(false)
+            txtResultPlayer1.text = "FINISHED"
+            txtResultPlayer2.text = "FINISHED"
+        }
+
         btnPlayer1.setOnClickListener {
             var num = randomNumber()
             when (num) {
@@ -63,13 +72,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                         else if (contPlayer1 == 21) {
                             txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                         }
                     }
 
@@ -79,13 +86,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 3 -> {
@@ -94,13 +99,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 4 -> {
@@ -109,13 +112,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 5 -> {
@@ -124,13 +125,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 6 -> {
@@ -139,13 +138,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer1.text = contPlayer1.toString()
                     if (contPlayer1>21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer1 == 21) {
                         txtResultPlayer1.text = contPlayer1.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
             }
@@ -162,13 +159,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 2 -> {
@@ -177,13 +172,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 3 -> {
@@ -192,13 +185,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 4 -> {
@@ -212,13 +203,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
                 6 -> {
@@ -227,13 +216,11 @@ class MainActivity : AppCompatActivity() {
                     txtResultPlayer2.text = contPlayer2.toString()
                     if (contPlayer2>21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU LOSE"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                     else if (contPlayer2 == 21) {
                         txtResultPlayer2.text = contPlayer2.toString() + " YOU WIN"
-                        btnPlayer1.setEnabled(false)
-                        btnPlayer2.setEnabled(false)
+                        gameOver()
                     }
                 }
             }
@@ -253,11 +240,11 @@ class MainActivity : AppCompatActivity() {
 
         btnRecharge.setOnClickListener  {
 
-            var contPlayer1 = 0
-            var contPlayer2 = 0
+            contPlayer1 = 0
+            contPlayer2 = 0
 
             txtResultPlayer1.text = contPlayer1.toString()
-            txtResultPlayer1.text = contPlayer1.toString()
+            txtResultPlayer2.text = contPlayer1.toString()
 
             btnPlayer1.setEnabled(true);
             btnPlayer2.setEnabled(false);
